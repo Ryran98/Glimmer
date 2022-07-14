@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.jpg";
 
 var appHeaderStyle = {
     paddingTop: "5vh",
