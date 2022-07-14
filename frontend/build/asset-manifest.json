@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fd07c384.css",
+    "main.js": "/static/js/main.77c09c44.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/two-ladies-hugging.jpg": "/static/media/two-ladies-hugging.bc3a06360530cf8a7825.jpg",
+    "static/media/home-support.jpg": "/static/media/home-support.fa2d6ee82e91d94c5885.jpg",
+    "static/media/home-hands.jpg": "/static/media/home-hands.1ad863b4f3c8cc46cfb3.jpg",
+    "index.html": "/index.html",
+    "main.fd07c384.css.map": "/static/css/main.fd07c384.css.map",
+    "main.77c09c44.js.map": "/static/js/main.77c09c44.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd07c384.css",
+    "static/js/main.77c09c44.js"
+  ]
+}
