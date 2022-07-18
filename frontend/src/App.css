@@ -5,3 +5,7 @@ body {
 .navbar-light .navbar-nav .nav-link {
   color: #000000;
 }
+
+.dropdown-item:hover {
+  background-color: #000000;
+}

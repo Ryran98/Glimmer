@@ -12,6 +12,10 @@ var navOptionsStyle = {
     color: "black"
 };
 
+var dropdownStyle = {
+    backgroundColor: "#f0f0f0"
+};
+
 export class Navigation extends React.Component {
     constructor(props) {
         super(props);
@@ -60,11 +64,11 @@ export class Navigation extends React.Component {
                             <DropdownToggle nav>
                                 Divorce
                             </DropdownToggle>
-                            <DropdownMenu end>
+                            <DropdownMenu end style={dropdownStyle}>
                                 <DropdownItem href="/divorce/resources">
                                     Resources
                                 </DropdownItem>
-                                <DropdownItem href="/divorce/memberstories">
+                                <DropdownItem href="/divorce/member-stories">
                                     Member Stories
                                 </DropdownItem>
                                 <DropdownItem href="/divorce/questionnaire">
