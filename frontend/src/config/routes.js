@@ -38,7 +38,7 @@ const mainRoutes = [
         name: 'DivorceResources'
     },
     {
-        path: '/divorce/memberstories',
+        path: '/divorce/member-stories',
         exact: true,
         auth: false,
         component: DivorceMemberStoriesPage,

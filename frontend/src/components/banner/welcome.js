@@ -37,8 +37,10 @@ export class WelcomeBanner extends React.Component {
                     <Row className="justify-content-center">
                         <div className="col-sm-10 col-md-8 col-lg-6">
                             <h2 style={welcomeBannerLeftTitleStyle}>You made it!</h2>
-                            <p style={welcomeBannerLeftTextStyle}>Welcome to Glimmer in the dark, here at Glimmer we want to help people through life events, be that the good, the bad or the ugly!
-                                We ask questions so that we can personalize our advice and to do lists, which can help you through a stressful time</p>
+                            <p style={welcomeBannerLeftTextStyle}>
+                                Welcome to Glimmer in the dark, here at Glimmer we want to help people through life events, be that the good, the bad or the ugly!
+                                We ask questions so that we can personalize our advice and to do lists, which can help you through a stressful time
+                            </p>
                         </div>
                     </Row>
                 </Container>

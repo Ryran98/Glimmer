@@ -57,7 +57,13 @@ export class AboutPage extends React.Component {
                     <div style={founderBoxStyle}>
                         <h2 style={founderTitleStyle}>All About Glimmer in the dark</h2>
                         <p style={founderSubtitleStyle}><i>Our founder</i></p>
-                        <p style={founderTextStyle}>After living through a difficult divorce, Taz found that there was little in terms of support or advice for people apart from getting a solicitor. She wanted to found Glimmer to give people a place to go to get advice and support through the process.</p>
+                        <p style={founderTextStyle}>
+                            After living through a difficult divorce, Taz found 
+                            that there was little in terms of support or advice for 
+                            people apart from getting a solicitor. She wanted to 
+                            found Glimmer to give people a place to go to get 
+                            advice and support through the process.
+                        </p>
                     </div>
                     <div className="col-6" style={candleImageStyle} />
                 </Row>
