@@ -5,6 +5,8 @@ import { Header } from './components/header';
 import routes from './config/routes';
 import { Footer } from './components/footer';
 
+//"start": "node server/server.js",
+
 function App() {
   return (
     <div className="App">

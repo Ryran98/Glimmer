@@ -4,7 +4,7 @@ import { Navbar, Nav, NavLink, NavItem, NavbarToggler, Collapse, Dropdown, Butto
 var navStyle = {
     backgroundColor: "#f0f0f0",
     border: "none",
-    maxHeight: "40px"
+    maxHeight: "60px"
 };
 
 var navOptionsStyle = {
