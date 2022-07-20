@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  //TODO: StrictMode seems to throw an error when opening the questionnaire modal, need to try removing this and then re-check functionality throught the app
   <React.StrictMode>
     <BrowserRouter>
       <App />
