@@ -4,7 +4,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter, Input, Label } from "reacts
 import questionnaire from "../../images/questionnaire.jpg";
 
 var containerStyle = {
-    marginBottom: "10vh"
+    marginBottom: "5vh"
 };
 
 var backgroundStyle = {
@@ -17,7 +17,6 @@ var backgroundStyle = {
 };
 
 var titleStyle = {
-    fontSize: "40px",
     fontWeight: "300",
     textAlign: "center"
 };
@@ -148,16 +147,16 @@ export class DivorceQuestionnairePage extends React.Component {
         return (
             <Container fluid style={containerStyle}>
                 <Row style={backgroundStyle}>
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <h2 style={titleStyle}>Questionnaire</h2>
                         <Row className="justify-content-center">
-                            <p className="col-6" style={contentStyle}>Complete our free questionnaire to get tailored advice, custom checklists and much more.</p>
+                            <p className="col-sm-6" style={contentStyle}>Complete our free questionnaire to get tailored advice, custom checklists and much more.</p>
                         </Row>
                         <Row className="justify-content-center">
                             <Button color="info" style={buttonStyle} onClick={this.handleOpenModal}>Take the Quiz</Button>
                         </Row>
                     </div>
-                    <div className="col-6" style={questionnaireImageStyle}></div>
+                    <div className="col-6 d-lg-inline d-none" style={questionnaireImageStyle}></div>
                 </Row>
                 <Modal isOpen={this.state.showModal} fade backdrop="static" centered>
                     <Progress color="success" value={this.state.progress} style={progressBarStyle} />

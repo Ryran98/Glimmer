@@ -8,7 +8,8 @@ var backgroundStyle = {
     paddingBottom: "5vh",
     borderLeft: "solid",
     borderRight: "solid",
-    borderWidth: "10px"
+    borderWidth: "10px",
+    marginBottom: "5vh"
 };
 
 var rowStyle = {
@@ -27,9 +28,9 @@ var memberNameStyle = {
 export class MemberStory extends React.Component {
     render() {
         return (
-            <Container className="col-4" style={backgroundStyle}>
+            <Container className="col-12 col-sm-8 col-md-4" style={backgroundStyle}>
                 <Row style={rowStyle}>
-                    <div className="col-7">
+                    <div className="col-sm-10 col-md-12 col-lg-8 col-xl-7">
                         <p style={contentStyle}>{this.props.content}</p>
                         <p style={memberNameStyle}><i>{this.props.memberName}</i></p>
                     </div>

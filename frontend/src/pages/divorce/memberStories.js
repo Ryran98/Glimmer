@@ -7,7 +7,7 @@ var backgroundStyle = {
     backgroundColor: "#000000",
     color: "#ffffff",
     marginBottom: "10vh",
-    paddingBottom: "10vh"
+    paddingBottom: "5vh"
 };
 
 var rowStyle = {

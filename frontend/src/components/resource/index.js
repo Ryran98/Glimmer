@@ -17,11 +17,11 @@ export class Resource extends React.Component {
     render() {
         return (
             <Row style={resourceContentStyle}>
-                <div className="col-3">
+                <div className="resource-text col-sm-10 col-md-6 col-xl-3 order-xl-first order-last text-center text-xl-left">
                     <h3>{this.props.title}</h3>
-                    <p style={resourceText}>{this.props.description}</p>
+                    <p className="" style={resourceText}>{this.props.description}</p>
                 </div>
-                <div className="col-3">
+                <div className="resource-image col-xl-3 d-sm-flex d-none">
                     <img src={this.props.image} />
                 </div>
             </Row>
