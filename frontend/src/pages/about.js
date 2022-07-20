@@ -8,16 +8,10 @@ var containerStyle = {
 };
 
 var backgroundStyle = {
-    backgroundColor: "#000000",
-    minHeight: "85vh",
-    paddingTop: "20vh",
-    paddingLeft: "10vw",
-    paddingRight: "10vw",
-    paddingBottom: "10vh",
-    alignItems: "end"
+    backgroundColor: "#000000"
 };
 
-var founderBoxStyle = {
+var fixedFounderBoxStyle = {
     backgroundColor: "white",
     height: "50vh",
     width: "500px",
@@ -28,7 +22,6 @@ var founderBoxStyle = {
 };
 
 var founderTitleStyle = {
-    fontSize: "40px",
     fontWeight: "300"
 };
 
@@ -49,12 +42,17 @@ var candleImageStyle = {
     right: "10vw"
 };
 
+var founderBoxStyle = {
+    backgroundColor: "white",
+    padding: "3rem"
+};
+
 export class AboutPage extends React.Component {
     render() {
         return (
             <Container fluid style={containerStyle}>
-                <Row style={backgroundStyle}>
-                    <div style={founderBoxStyle}>
+                <Row className="about-banner" style={backgroundStyle}>
+                    <div className="d-md-inline d-none" style={fixedFounderBoxStyle}>
                         <h2 style={founderTitleStyle}>All About Glimmer in the dark</h2>
                         <p style={founderSubtitleStyle}><i>Our founder</i></p>
                         <p style={founderTextStyle}>
@@ -65,7 +63,18 @@ export class AboutPage extends React.Component {
                             advice and support through the process.
                         </p>
                     </div>
-                    <div className="col-6" style={candleImageStyle} />
+                    <div className="col-6 d-md-inline d-none" style={candleImageStyle} />
+                    <div className="d-inline d-md-none" style={founderBoxStyle}>
+                    <h2 className="about-title" style={founderTitleStyle}>All About Glimmer in the dark</h2>
+                        <p style={founderSubtitleStyle}><i>Our founder</i></p>
+                        <p style={founderTextStyle}>
+                            After living through a difficult divorce, Taz found 
+                            that there was little in terms of support or advice for 
+                            people apart from getting a solicitor. She wanted to 
+                            found Glimmer to give people a place to go to get 
+                            advice and support through the process.
+                        </p>
+                    </div>
                 </Row>
             </Container>
         );

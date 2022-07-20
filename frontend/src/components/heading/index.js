@@ -2,13 +2,10 @@ import React from "react";
 import { Row } from "reactstrap";
 
 var headingStyle = {
-    justifyContent: "center",
-    paddingTop: "10vh",
-    paddingBottom: "10vh"
+    justifyContent: "center"
 };
 
 var headingTitleStyle = {
-    fontSize: "40px",
     paddingTop: "2vh",
     paddingBottom: "2vh"
 };
@@ -25,7 +22,7 @@ export class Heading extends React.Component {
     
     render() {
         return (
-            <Row style={headingStyle}>
+            <Row className="app-heading" style={headingStyle}>
                 <div>
                     <h2 style={headingTitleStyle}>{this.props.title}</h2>
                     <p style={headingSubtitleStyle}><i>{this.props.subtitle}</i></p>

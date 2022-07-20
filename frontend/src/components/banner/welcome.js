@@ -6,7 +6,6 @@ var welcomeBannerLeftStyle = {
     backgroundColor: "#000000",
     margin: "0",
     maxWidth: "100%",
-    height: "60vh",
     color: "#ffffff",
     display: "flex",
     textAlign: "center",
@@ -19,10 +18,6 @@ var welcomeBannerRightStyle = {
     backgroundPosition: "right top 50%"
 };
 
-var welcomeBannerLeftTitleStyle = {
-    fontSize: "65px"
-};
-
 var welcomeBannerLeftTextStyle = {
     fontSize: "1rem",
     fontWeight: "300",
@@ -33,10 +28,10 @@ export class WelcomeBanner extends React.Component {
     render() {
         return (
             <Row>
-                <Container className="col-xl-6" style={welcomeBannerLeftStyle}>
+                <Container className="col-xl-6 order-xl-first order-last welcome-banner-left" style={welcomeBannerLeftStyle}>
                     <Row className="justify-content-center">
-                        <div className="col-sm-10 col-md-8 col-lg-6">
-                            <h2 style={welcomeBannerLeftTitleStyle}>You made it!</h2>
+                        <div className="col-sm-10 col-md-8 col-xxl-6">
+                            <h4>You made it!</h4>
                             <p style={welcomeBannerLeftTextStyle}>
                                 Welcome to Glimmer in the dark, here at Glimmer we want to help people through life events, be that the good, the bad or the ugly!
                                 We ask questions so that we can personalize our advice and to do lists, which can help you through a stressful time
@@ -44,7 +39,7 @@ export class WelcomeBanner extends React.Component {
                         </div>
                     </Row>
                 </Container>
-                <div className="col-xl-6" style={welcomeBannerRightStyle}></div>
+                <div className="col-xl-6 d-sm-inline d-none" style={welcomeBannerRightStyle}></div>
             </Row>
         );
     }

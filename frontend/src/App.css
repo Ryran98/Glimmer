@@ -2,10 +2,130 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.app-header {
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+.about-title {
+  font-size: 25px;
+}
+
 .navbar-light .navbar-nav .nav-link {
   color: #000000;
 }
 
 .dropdown-item:hover {
   background-color: #000000;
+}
+
+.contact-us-banner {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.welcome-banner-left {
+  height: 50vh;
+}
+
+.about-banner {
+  min-height: 50vh;
+  padding-top: 3vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 3vh;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 350px) and (max-width: 499px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .app-header {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  
+  h1 {
+    font-size: 55px;
+  }
+
+  h4 {
+    font-size: 65px;
+  }
+
+  .about-title {
+    font-size: 30px;
+  }
+
+  .contact-us-banner {
+    padding: 10vh;
+  }
+
+  .welcome-banner-left {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .about-banner {
+    padding-top: 10vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 10vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .app-header {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  
+  .about-banner {
+    min-height: 85vh;
+    padding-top: 20vh;
+    align-items: end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app-heading {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .resource-text {
+    padding-top: 2vh;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .resource-image {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
 }

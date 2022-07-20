@@ -24,7 +24,7 @@ export class SubscribeForm extends React.Component {
         return (
             <Container fluid style={footerStyle}>
                 <div style={subscribeFormStyle}>
-                    <Form className="col-3">
+                    <Form className="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3">
                         <Container fluid className="justify-content-center">
                             <h3>Subscribe Form</h3>
 
