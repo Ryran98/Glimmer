@@ -1,10 +1,9 @@
 import React from "react";
-import { Navbar, Nav, NavLink, NavItem, NavbarToggler, Collapse, Dropdown, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Navbar, Nav, NavLink, NavItem, NavbarToggler, Collapse, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 var navStyle = {
     backgroundColor: "#f0f0f0",
-    border: "none",
-    maxHeight: "60px"
+    border: "none"
 };
 
 var navOptionsStyle = {
@@ -53,7 +52,7 @@ export class Navigation extends React.Component {
 
     render() {
         return (
-            <Navbar expand="lg" light style={navStyle}>
+            <Navbar className="app-navbar" expand="sm" light style={navStyle}>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar >
                     <Nav className="ms-auto" navbar style={navOptionsStyle}>
