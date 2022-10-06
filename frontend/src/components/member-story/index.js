@@ -3,7 +3,7 @@ import { Container, Row } from "reactstrap";
 
 var backgroundStyle = {
     backgroundColor: "#ffffff",
-    color: "#000000",
+    color: "#286560",
     paddingTop: "5vh",
     paddingBottom: "5vh",
     borderLeft: "solid",

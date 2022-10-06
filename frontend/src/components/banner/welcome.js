@@ -3,7 +3,7 @@ import { Container, Row } from "reactstrap";
 import huggingImage from "../../images/two-ladies-hugging.jpg";
 
 var welcomeBannerLeftStyle = {
-    backgroundColor: "#000000",
+    backgroundColor: "#286560",
     margin: "0",
     maxWidth: "100%",
     color: "#ffffff",
@@ -33,8 +33,8 @@ export class WelcomeBanner extends React.Component {
                         <div className="col-sm-10 col-md-8 col-xxl-6">
                             <h4>You made it!</h4>
                             <p style={welcomeBannerLeftTextStyle}>
-                                Welcome to Glimmer in the dark, here at Glimmer we want to help people through life events, be that the good, the bad or the ugly!
-                                We ask questions so that we can personalize our advice and to do lists, which can help you through a stressful time
+                                Welcome to Glimmer in the dark, here at Glimmer we want to help people through life events, be that the good, 
+                                the bad or the ugly! We ask questions to make you think about the situation and then offer personalised advice and tips to help you through.
                             </p>
                         </div>
                     </Row>

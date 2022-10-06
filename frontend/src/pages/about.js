@@ -8,7 +8,7 @@ var containerStyle = {
 };
 
 var backgroundStyle = {
-    backgroundColor: "#000000"
+    backgroundColor: "#286560"
 };
 
 var fixedFounderBoxStyle = {
