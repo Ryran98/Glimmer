@@ -2,6 +2,11 @@ import React from "react";
 import { Container } from "reactstrap";
 import { WelcomeBanner } from "../components/banner/welcome";
 import { ContactUsBanner } from "../components/banner/contact-us";
+import { SubscribeForm } from "../components/footer/subscribeForm";
+
+var containerStyle = {
+    marginBottom: "10vh"
+};
 
 export class HomePage extends React.Component {
     constructor(props) {
@@ -10,10 +15,13 @@ export class HomePage extends React.Component {
 
     render() {
         return (
-            <Container fluid>
-                <WelcomeBanner />
-                <ContactUsBanner />
-            </Container>
+            <div>
+                <Container fluid style={containerStyle}>
+                    <WelcomeBanner />
+                    {/* <ContactUsBanner /> */}
+                </Container>
+                <SubscribeForm />
+            </div>
         );
     }
 }

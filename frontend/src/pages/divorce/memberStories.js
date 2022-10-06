@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
+import { SubscribeForm } from "../../components/footer/subscribeForm";
 import { Heading } from "../../components/heading";
 import { MemberStory } from "../../components/member-story";
 
 var backgroundStyle = {
-    backgroundColor: "#000000",
+    backgroundColor: "#286560",
     color: "#ffffff",
     marginBottom: "10vh",
     paddingBottom: "5vh"
@@ -21,17 +22,20 @@ export class DivorceMemberStoriesPage extends React.Component {
 
         this.defaultContent = "This is your Member Story. Give your members the stage to share their experiences with your Support Group.";
     }
-    
+
     render() {
         return (
-            <Container fluid style={backgroundStyle}>
-                <Heading title="Member Stories" subtitle="Finding Support" />
-                <Row style={rowStyle}>
-                    <MemberStory content={this.defaultContent} memberName="Quinn Davis" />
-                    <MemberStory content={this.defaultContent} memberName="Sandy Williams" />
-                    <MemberStory content={this.defaultContent} memberName="Casey Johnson" />
-                </Row>
-            </Container>
+            <div>
+                <Container fluid style={backgroundStyle}>
+                    <Heading title="Member Stories" subtitle="Finding Support" />
+                    <Row style={rowStyle}>
+                        <MemberStory content={this.defaultContent} memberName="Quinn Davis" />
+                        <MemberStory content={this.defaultContent} memberName="Sandy Williams" />
+                        <MemberStory content={this.defaultContent} memberName="Casey Johnson" />
+                    </Row>
+                </Container>
+                <SubscribeForm />
+            </div>
         );
     }
 }

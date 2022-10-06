@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Progress } from "reactstrap";
 import { Modal, ModalHeader, ModalBody, ModalFooter, Input, Label } from "reactstrap";
+import { SubscribeForm } from "../../components/footer/subscribeForm";
 import questionnaire from "../../images/questionnaire.jpg";
 
 var containerStyle = {
@@ -8,7 +9,7 @@ var containerStyle = {
 };
 
 var backgroundStyle = {
-    backgroundColor: "#000000",
+    backgroundColor: "#286560",
     color: "#ffffff",
     paddingTop: "5vh",
     paddingBottom: "5vh",
@@ -145,42 +146,45 @@ export class DivorceQuestionnairePage extends React.Component {
 
     render() {
         return (
-            <Container fluid style={containerStyle}>
-                <Row style={backgroundStyle}>
-                    <div className="col-lg-6">
-                        <h2 style={titleStyle}>Questionnaire</h2>
-                        <Row className="justify-content-center">
-                            <p className="col-sm-6" style={contentStyle}>Complete our free questionnaire to get tailored advice, custom checklists and much more.</p>
-                        </Row>
-                        <Row className="justify-content-center">
-                            <Button color="info" style={buttonStyle} onClick={this.handleOpenModal}>Take the Quiz</Button>
-                        </Row>
-                    </div>
-                    <div className="col-6 d-lg-inline d-none" style={questionnaireImageStyle}></div>
-                </Row>
-                <Modal isOpen={this.state.showModal} fade backdrop="static" centered>
-                    <Progress color="success" value={this.state.progress} style={progressBarStyle} />
-                    <ModalHeader toggle={this.handleCloseModal} close={this.closeButton}>
-                        {this.questions[this.state.questionNumber - 1]?.title}
-                    </ModalHeader>
-                    <ModalBody>
-                        <Container>
-                            {this.questions[this.state.questionNumber - 1]?.answers.map((answer, index) => {
-                                return (
-                                    <li key={index} style={answerItemStyle}>
-                                        <Input id={`${this.state.questionNumber}_${index}`} type="radio" name={this.state.questionNumber} />
-                                        <Label>{answer}</Label>
-                                    </li>
-                                );
-                            })}
-                        </Container>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button onClick={this.previousQuestion}>Back</Button>
-                        <Button onClick={this.nextQuestion}>Next</Button>
-                    </ModalFooter>
-                </Modal>
-            </Container>
+            <div>
+                <Container fluid style={containerStyle}>
+                    <Row style={backgroundStyle}>
+                        <div className="col-lg-6">
+                            <h2 style={titleStyle}>Questionnaire</h2>
+                            <Row className="justify-content-center">
+                                <p className="col-sm-6" style={contentStyle}>Complete our free questionnaire to get tailored advice</p>
+                            </Row>
+                            <Row className="justify-content-center">
+                                <Button color="info" style={buttonStyle} onClick={this.handleOpenModal}>Take the Quiz</Button>
+                            </Row>
+                        </div>
+                        <div className="col-6 d-lg-inline d-none" style={questionnaireImageStyle}></div>
+                    </Row>
+                    <Modal isOpen={this.state.showModal} fade backdrop="static" centered>
+                        <Progress color="success" value={this.state.progress} style={progressBarStyle} />
+                        <ModalHeader toggle={this.handleCloseModal} close={this.closeButton}>
+                            {this.questions[this.state.questionNumber - 1]?.title}
+                        </ModalHeader>
+                        <ModalBody>
+                            <Container>
+                                {this.questions[this.state.questionNumber - 1]?.answers.map((answer, index) => {
+                                    return (
+                                        <li key={index} style={answerItemStyle}>
+                                            <Input id={`${this.state.questionNumber}_${index}`} type="radio" name={this.state.questionNumber} />
+                                            <Label>{answer}</Label>
+                                        </li>
+                                    );
+                                })}
+                            </Container>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button onClick={this.previousQuestion}>Back</Button>
+                            <Button onClick={this.nextQuestion}>Next</Button>
+                        </ModalFooter>
+                    </Modal>
+                </Container>
+                <SubscribeForm />
+            </div>
         );
     }
 }
