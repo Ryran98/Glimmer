@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd07c384.css",
-    "main.js": "/static/js/main.a8d9daf1.js",
+    "main.css": "/static/css/main.3e49e36d.css",
+    "main.js": "/static/js/main.0370a995.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/two-ladies-hugging.jpg": "/static/media/two-ladies-hugging.bc3a06360530cf8a7825.jpg",
-    "static/media/home-support.jpg": "/static/media/home-support.fa2d6ee82e91d94c5885.jpg",
     "static/media/home-hands.jpg": "/static/media/home-hands.1ad863b4f3c8cc46cfb3.jpg",
+    "static/media/header.png": "/static/media/header.f5555dec674a27036856.png",
+    "static/media/questionnaire.jpg": "/static/media/questionnaire.f2b8794813f9e5bd194c.jpg",
+    "static/media/emotions.jpg": "/static/media/emotions.279537f13ad0c990fbb7.jpg",
+    "static/media/candles.jpg": "/static/media/candles.a4fdab9ea09641ecf005.jpg",
+    "static/media/cope.jpg": "/static/media/cope.329eacc9a3e4c594512b.jpg",
     "index.html": "/index.html",
-    "main.fd07c384.css.map": "/static/css/main.fd07c384.css.map",
-    "main.a8d9daf1.js.map": "/static/js/main.a8d9daf1.js.map",
+    "main.3e49e36d.css.map": "/static/css/main.3e49e36d.css.map",
+    "main.0370a995.js.map": "/static/js/main.0370a995.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd07c384.css",
-    "static/js/main.a8d9daf1.js"
+    "static/css/main.3e49e36d.css",
+    "static/js/main.0370a995.js"
   ]
 }

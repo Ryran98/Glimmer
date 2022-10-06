@@ -15,7 +15,6 @@ export class Footer extends React.Component {
     render() {
         return (
             <div>
-                <SubscribeForm />
                 <Brands />
                 <Container fluid style={copyrightStyle}>
                     <Row>

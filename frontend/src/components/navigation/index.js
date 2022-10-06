@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, NavLink, NavItem, NavbarToggler, Collapse, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 var navStyle = {
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "#D7D9D8",
     border: "none"
 };
 
@@ -12,7 +12,7 @@ var navOptionsStyle = {
 };
 
 var dropdownStyle = {
-    backgroundColor: "#f0f0f0"
+    backgroundColor: "#D7D9D8"
 };
 
 export class Navigation extends React.Component {

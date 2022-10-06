@@ -25,7 +25,7 @@ function App() {
           )
         })}
       </Switch>
-      <Footer />
+      <Footer showSubscribeForm="true" />
     </div>
   );
 }
