@@ -83,7 +83,7 @@ export class Navigation extends React.Component {
                             </Dropdown>
                         </BrowserView>
                         <MobileView>
-                            <Dropdown nav inNavbar onMouseOver={this.onMouseOverDropdown} onMouseLeave={this.onMouseLeaveDropdown} isOpen={this.state.isOpenDropdown} toggle={this.dropdownToggle}>
+                            <Dropdown nav inNavbar onMouseOver={this.onMouseOverDropdown} onMouseLeave={this.onMouseLeaveDropdown} isOpen={this.state.isOpenDropdown} toggle={this.dropdownToggle} onClick={this.dropdownToggle}>
                                 <DropdownToggle nav>
                                     Divorce
                                 </DropdownToggle>
