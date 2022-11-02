@@ -16,7 +16,7 @@ var twitterStyle = {
     color: "#000000"
 };
 
-var linkedinStyle = {
+var instagramStyle = {
     fontSize: "15px",
     marginLeft: "15px",
     color: "#000000"
@@ -28,8 +28,8 @@ export class Brands extends React.Component {
             <Container fluid>
                 <Row className="justify-content-center" style={brandStyle}>
                     <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook-f" style={facebookStyle}></i></a>
-                    <a href="https://www.twitter.com/" target="_blank"><i className="fa-brands fa-twitter" style={twitterStyle}></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin-in" style={linkedinStyle}></i></a>
+                    <a href="https://twitter.com/glimmerinthe" target="_blank"><i className="fa-brands fa-twitter" style={twitterStyle}></i></a>
+                    <a href="https://www.instagram.com/glimmer_inthedark/" target="_blank"><i className="fa-brands fa-square-instagram" style={instagramStyle}></i></a>
                 </Row>
             </Container>
         );

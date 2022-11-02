@@ -50,6 +50,10 @@ export class Navigation extends React.Component {
         this.setState({isOpenDropdown: false});
     }
 
+    divorceOnClick() {
+        window.location ="/divorce/questionnaire";
+    }
+
     render() {
         return (
             <Navbar className="app-navbar" expand="sm" light style={navStyle}>
@@ -59,7 +63,7 @@ export class Navigation extends React.Component {
                         <NavItem>
                             <NavLink href="/">Home</NavLink>
                         </NavItem>
-                        <Dropdown nav inNavbar onMouseOver={this.onMouseOverDropdown} onMouseLeave={this.onMouseLeaveDropdown} isOpen={this.state.isOpenDropdown} toggle={this.dropdownToggle}>
+                        <Dropdown nav inNavbar onMouseOver={this.onMouseOverDropdown} onMouseLeave={this.onMouseLeaveDropdown} isOpen={this.state.isOpenDropdown} toggle={this.dropdownToggle} onClick={this.divorceOnClick}>
                             <DropdownToggle nav>
                                 Divorce
                             </DropdownToggle>
