@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
-import candleImage from "../images/candles.jpg"
+import aboutImage from "../images/about.jpg"
 
 var containerStyle = {
     marginBottom: "10vh",
@@ -37,7 +37,7 @@ var founderTextStyle = {
 
 var candleImageStyle = {
     height: "70vh",
-    background: "url(" + candleImage + ") no-repeat left bottom",
+    background: "url(" + aboutImage + ") no-repeat left bottom",
     position: "absolute",
     right: "10vw"
 };
@@ -47,32 +47,32 @@ var founderBoxStyle = {
     padding: "3rem"
 };
 
+const founderTitle = "All About Glimmer in the dark";
+const founderSubtitle = "Our founder";
+const founderText = "After living through a difficult divorce, Taz found " +
+                    "that there was little in terms of support or advice for " +
+                    "people apart from getting a solicitor. She wanted to " +
+                    "found Glimmer to give people a place to go to get " +
+                    "advice and support through the process.";
+
 export class AboutPage extends React.Component {
     render() {
         return (
             <Container fluid style={containerStyle}>
                 <Row className="about-banner" style={backgroundStyle}>
                     <div className="d-md-inline d-none" style={fixedFounderBoxStyle}>
-                        <h2 style={founderTitleStyle}>All About Glimmer in the dark</h2>
-                        <p style={founderSubtitleStyle}><i>Our founder</i></p>
+                        <h2 style={founderTitleStyle}>{founderTitle}</h2>
+                        <p style={founderSubtitleStyle}><i>{founderSubtitle}</i></p>
                         <p style={founderTextStyle}>
-                            After living through a difficult divorce, Taz found 
-                            that there was little in terms of support or advice for 
-                            people apart from getting a solicitor. She wanted to 
-                            found Glimmer to give people a place to go to get 
-                            advice and support through the process.
+                            {founderText}
                         </p>
                     </div>
                     <div className="col-6 d-md-inline d-none" style={candleImageStyle} />
                     <div className="d-inline d-md-none" style={founderBoxStyle}>
-                    <h2 className="about-title" style={founderTitleStyle}>All About Glimmer in the dark</h2>
-                        <p style={founderSubtitleStyle}><i>Our founder</i></p>
+                    <h2 className="about-title" style={founderTitleStyle}>{founderTitle}</h2>
+                        <p style={founderSubtitleStyle}><i>{founderSubtitle}</i></p>
                         <p style={founderTextStyle}>
-                            After living through a difficult divorce, Taz found 
-                            that there was little in terms of support or advice for 
-                            people apart from getting a solicitor. She wanted to 
-                            found Glimmer to give people a place to go to get 
-                            advice and support through the process.
+                            {founderText}
                         </p>
                     </div>
                 </Row>

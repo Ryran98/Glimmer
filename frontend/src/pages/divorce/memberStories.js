@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row } from "reactstrap";
-import { SubscribeForm } from "../../components/footer/subscribeForm";
 import { Heading } from "../../components/heading";
 import { MemberStory } from "../../components/member-story";
 
@@ -34,7 +33,6 @@ export class DivorceMemberStoriesPage extends React.Component {
                         <MemberStory content={this.defaultContent} memberName="Casey Johnson" />
                     </Row>
                 </Container>
-                <SubscribeForm />
             </div>
         );
     }
