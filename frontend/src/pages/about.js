@@ -13,7 +13,8 @@ var backgroundStyle = {
 
 var fixedFounderBoxStyle = {
     backgroundColor: "white",
-    height: "50vh",
+    minHeight: "50vh",
+    maxHeight: "75vh",
     width: "500px",
     padding: "3rem",
     position: "absolute",

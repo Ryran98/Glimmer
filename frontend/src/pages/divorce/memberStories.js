@@ -2,6 +2,9 @@ import React from "react";
 import { Container, Row } from "reactstrap";
 import { Heading } from "../../components/heading";
 import { MemberStory } from "../../components/member-story";
+import story1 from "../../images/story1.jpg";
+import story2 from "../../images/story2.jpg";
+import story3 from "../../images/story3.jpg";
 
 var backgroundStyle = {
     backgroundColor: "#286560",
@@ -28,9 +31,9 @@ export class DivorceMemberStoriesPage extends React.Component {
                 <Container fluid style={backgroundStyle}>
                     <Heading title="Member Stories" subtitle="Finding Support" />
                     <Row style={rowStyle}>
-                        <MemberStory content={this.defaultContent} memberName="Quinn Davis" />
-                        <MemberStory content={this.defaultContent} memberName="Sandy Williams" />
-                        <MemberStory content={this.defaultContent} memberName="Casey Johnson" />
+                        <MemberStory image={story1} content={this.defaultContent} memberName="Quinn Davis" />
+                        <MemberStory image={story2} content={this.defaultContent} memberName="Sandy Williams" />
+                        <MemberStory image={story3} content={this.defaultContent} memberName="Casey Johnson" />
                     </Row>
                 </Container>
             </div>

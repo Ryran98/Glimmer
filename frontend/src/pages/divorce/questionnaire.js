@@ -161,7 +161,7 @@ export class DivorceQuestionnairePage extends React.Component {
                         <div className="col-6 d-lg-inline d-none" style={questionnaireImageStyle}></div>
                     </Row>
                     <Modal isOpen={this.state.showModal} fade backdrop="static" centered>
-                        <Progress color="success" value={this.state.progress} style={progressBarStyle} />
+                        <Progress color="info" value={this.state.progress} style={progressBarStyle} />
                         <ModalHeader toggle={this.handleCloseModal} close={this.closeButton}>
                             {this.questions[this.state.questionNumber - 1]?.title}
                         </ModalHeader>

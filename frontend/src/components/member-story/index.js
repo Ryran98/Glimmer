@@ -6,10 +6,7 @@ var backgroundStyle = {
     color: "#286560",
     paddingTop: "5vh",
     paddingBottom: "5vh",
-    borderLeft: "solid",
-    borderRight: "solid",
-    borderWidth: "10px",
-    marginBottom: "5vh"
+    marginBottom: "10vh"
 };
 
 var rowStyle = {
@@ -25,16 +22,25 @@ var memberNameStyle = {
     paddingTop: "2vh"
 };
 
+var imageStyle = {
+    width: "100%",
+    marginBottom: "5vh",
+    display: "flex"
+};
+
 export class MemberStory extends React.Component {
     render() {
         return (
-            <Container className="col-12 col-sm-8 col-md-4" style={backgroundStyle}>
-                <Row style={rowStyle}>
-                    <div className="col-sm-10 col-md-12 col-lg-8 col-xl-7">
-                        <p style={contentStyle}>{this.props.content}</p>
-                        <p style={memberNameStyle}><i>{this.props.memberName}</i></p>
-                    </div>
-                </Row>
+            <Container fluid className="col-12 col-md-8 col-lg-6 col-xl-4">
+                <img src={this.props.image} style={imageStyle} />
+                <Container style={backgroundStyle}>
+                    <Row style={rowStyle}>
+                        <div className="col-md-12 col-lg-8 col-xl-7">
+                            <p style={contentStyle}>{this.props.content}</p>
+                            <p style={memberNameStyle}><i>{this.props.memberName}</i></p>
+                        </div>
+                    </Row>
+                </Container>
             </Container>
         );
     }
