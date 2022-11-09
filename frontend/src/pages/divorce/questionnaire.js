@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container, Row, Progress } from "reactstrap";
 import { Modal, ModalHeader, ModalBody, ModalFooter, Input, Label } from "reactstrap";
 import { SubscribeForm } from "../../components/footer/subscribeForm";
+import { Question } from "../../components/questionnaire/question";
 import questionnaire from "../../images/questionnaire.jpg";
 
 var containerStyle = {
@@ -38,7 +39,7 @@ var questionnaireImageStyle = {
 };
 
 var progressBarStyle = {
-    height: "5px"
+    height: "10px"
 };
 
 var modalCloseButtonStyle = {
@@ -59,43 +60,53 @@ export class DivorceQuestionnairePage extends React.Component {
         this.questions = [
             {
                 title: "Are you in danger?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Are you experiencing domestic abuse?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Which country are you currently residing in?",
-                answers: ["Northern Ireland", "England", "Wales", "Scotland"]
+                answers: ["Northern Ireland", "England", "Wales", "Scotland"],
+                selection: null
             },
             {
                 title: "Do you have somewhere to stay?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Are you amicable with your spouse in terms of child custody and financial settlement?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Do you have children with your spouse?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Are they under 18?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Do you have shared financial assets?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Do you have any shared financial burdens?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             },
             {
                 title: "Do you have any pets?",
-                answers: ["Yes", "No"]
+                answers: ["Yes", "No"],
+                selection: null
             }
         ];
 
@@ -114,7 +125,7 @@ export class DivorceQuestionnairePage extends React.Component {
     }
 
     handleOpenModal() {
-        this.setState({ showModal: true });
+        this.setState({ showQuestions: true });
     }
 
     handleCloseModal() {
@@ -147,43 +158,54 @@ export class DivorceQuestionnairePage extends React.Component {
     render() {
         return (
             <div>
-                <Container fluid style={containerStyle}>
-                    <Row style={backgroundStyle}>
-                        <div className="col-lg-6">
-                            <h2 style={titleStyle}>Questionnaire</h2>
-                            <Row className="justify-content-center">
-                                <p className="col-sm-6" style={contentStyle}>Complete our free questionnaire to get tailored advice</p>
+                {this.state.showQuestions ?
+                    <div>
+                        <Container fluid style={containerStyle}>
+                            <Progress color="info" value="50" style={progressBarStyle} />
+                            {this.questions.map((question, index) => <Question question={question} index={index} />)}
+                        </Container>
+                    </div>
+                    :
+                    <div>
+                        <Container fluid style={containerStyle}>
+                            <Row style={backgroundStyle}>
+                                <div className="col-lg-6">
+                                    <h2 style={titleStyle}>Questionnaire</h2>
+                                    <Row className="justify-content-center">
+                                        <p className="col-sm-6" style={contentStyle}>Complete our free questionnaire to get tailored advice</p>
+                                    </Row>
+                                    <Row className="justify-content-center">
+                                        <Button color="info" style={buttonStyle} onClick={this.handleOpenModal}>Take the Quiz</Button>
+                                    </Row>
+                                </div>
+                                <div className="col-6 d-lg-inline d-none" style={questionnaireImageStyle}></div>
                             </Row>
-                            <Row className="justify-content-center">
-                                <Button color="info" style={buttonStyle} onClick={this.handleOpenModal}>Take the Quiz</Button>
-                            </Row>
-                        </div>
-                        <div className="col-6 d-lg-inline d-none" style={questionnaireImageStyle}></div>
-                    </Row>
-                    <Modal isOpen={this.state.showModal} fade backdrop="static" centered>
-                        <Progress color="info" value={this.state.progress} style={progressBarStyle} />
-                        <ModalHeader toggle={this.handleCloseModal} close={this.closeButton}>
-                            {this.questions[this.state.questionNumber - 1]?.title}
-                        </ModalHeader>
-                        <ModalBody>
-                            <Container>
-                                {this.questions[this.state.questionNumber - 1]?.answers.map((answer, index) => {
-                                    return (
-                                        <li key={index} style={answerItemStyle}>
-                                            <Input id={`${this.state.questionNumber}_${index}`} type="radio" name={this.state.questionNumber} />
-                                            <Label>{answer}</Label>
-                                        </li>
-                                    );
-                                })}
-                            </Container>
-                        </ModalBody>
-                        <ModalFooter>
-                            <Button onClick={this.previousQuestion}>Back</Button>
-                            <Button onClick={this.nextQuestion}>Next</Button>
-                        </ModalFooter>
-                    </Modal>
-                </Container>
-                <SubscribeForm />
+                            <Modal isOpen={this.state.showModal} fade backdrop="static" centered>
+                                <Progress color="info" value={this.state.progress} style={progressBarStyle} />
+                                <ModalHeader toggle={this.handleCloseModal} close={this.closeButton}>
+                                    {this.questions[this.state.questionNumber - 1]?.title}
+                                </ModalHeader>
+                                <ModalBody>
+                                    <Container>
+                                        {this.questions[this.state.questionNumber - 1]?.answers.map((answer, index) => {
+                                            return (
+                                                <li key={index} style={answerItemStyle}>
+                                                    <Input id={`${this.state.questionNumber}_${index}`} type="radio" name={this.state.questionNumber} />
+                                                    <Label>{answer}</Label>
+                                                </li>
+                                            );
+                                        })}
+                                    </Container>
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button onClick={this.previousQuestion}>Back</Button>
+                                    <Button onClick={this.nextQuestion}>Next</Button>
+                                </ModalFooter>
+                            </Modal>
+                        </Container>
+                        <SubscribeForm />
+                    </div>
+                }
             </div>
         );
     }
